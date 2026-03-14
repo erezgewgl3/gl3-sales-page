@@ -144,8 +144,9 @@
   }
   .testimonial.featured .quote { font-size: 19px; }
   .testimonial.wa-style {
-    background: #F5EDD8; border-color: #E0D2B8; position: relative;
+    background: #EDE4D0; border-color: #D9CCB4; position: relative;
     border-radius: 14px 14px 14px 0;
+    border-right: 4px solid var(--warm-gold);
   }
   .testimonial.wa-style .quote { color: var(--text-primary); }
   .testimonial.wa-style .source { color: var(--text-muted); }
@@ -189,8 +190,8 @@
   @media (max-width: 640px) { .about-stats { justify-content: center; } }
   .about-stat { text-align: center; }
   .about-stat .num {
-    font-family: 'Frank Ruhl Libre', serif; font-size: 24px; font-weight: 900;
-    color: var(--deep-brown);
+    font-family: 'Frank Ruhl Libre', serif; font-size: 32px; font-weight: 900;
+    color: var(--warm-gold);
   }
   .about-stat .lbl { font-size: 12px; color: var(--text-muted); font-weight: 500; }
 
@@ -233,10 +234,10 @@
     text-align: center; padding: 7px 16px; font-size: 13px; font-weight: 700;
   }
   .running-total {
-    text-align: left; padding: 8px 0 0;
-    font-size: 14px; color: var(--text-muted); font-weight: 600;
+    font-size: 12px; color: var(--text-muted); font-weight: 600;
+    margin-top: 4px;
   }
-  .running-total span { color: var(--warm-gold); font-weight: 800; font-size: 16px; }
+  .running-total span { color: var(--warm-gold); font-weight: 800; font-size: 13px; }
 
   /* ===== VALUE REVEAL ===== */
   .value-reveal {
@@ -280,12 +281,12 @@
   }
 
   /* ===== GUARANTEE ===== */
-  .guarantee { background: var(--warm-cream); padding: 56px 24px; }
+  .guarantee { background: var(--warm-cream); padding: 36px 24px; }
   .guarantee-box {
     background: #EDF3EA; border: 2px solid #C5D9BB; border-radius: 20px;
-    padding: 40px 32px; text-align: center;
+    padding: 28px 28px; text-align: center;
   }
-  .guarantee-box .icon { font-size: 44px; margin-bottom: 12px; }
+  .guarantee-box .icon { font-size: 32px; margin-bottom: 8px; }
   .guarantee-box h3 {
     font-family: 'Frank Ruhl Libre', serif; font-size: 24px; font-weight: 700;
     color: var(--deep-brown); margin-bottom: 10px;
@@ -333,8 +334,11 @@
     .fade-up.visible { opacity: 1; transform: translateY(0); }
   }
 
-  /* ===== MOBILE TYPOGRAPHY ===== */
+  /* ===== MOBILE TYPOGRAPHY & SPACING ===== */
   @media (max-width: 640px) {
+    section { padding: 44px 24px; }
+    .before-after { padding: 44px 24px; }
+    .guarantee { padding: 36px 24px; }
     .section-body { font-size: 16px; }
     .bonus-info p { font-size: 13.5px; }
     .faq-item .faq-answer { font-size: 14.5px; }
@@ -444,9 +448,8 @@
             <h4>🛒 הכל מהסופר</h4>
             <p>מדריך מרכיבים, תחליפים ורשימת קניות מלאה. בלי אייהרב, בלי חנויות מיוחדות. הכל מהסופר בשכונה.</p>
           </div>
-          <div class="bonus-value"><div class="amount">149 ₪</div><div class="label">כלול ✓</div></div>
+          <div class="bonus-value"><div class="amount">149 ₪</div><div class="label">כלול ✓</div><div class="running-total">מצטבר: <span>149 ₪</span></div></div>
         </div>
-        <div class="running-total" style="padding: 0 24px 12px;">שווי מצטבר: <span>149 ₪</span></div>
       </div>
 
       <!-- BONUS 2: Bread workshop (expiring — urgency) -->
@@ -458,9 +461,8 @@
             <h4>🍞 סדנת הלחמים המוקלטת</h4>
             <p>לחם ב-15 דקות. בלי גלוטן, בלי סוכר. ההקלטה המלאה עם כל השאלות והתשובות.</p>
           </div>
-          <div class="bonus-value"><div class="amount">199 ₪</div><div class="label">כלול ✓</div></div>
+          <div class="bonus-value"><div class="amount">199 ₪</div><div class="label">כלול ✓</div><div class="running-total">מצטבר: <span>348 ₪</span></div></div>
         </div>
-        <div class="running-total" style="padding: 0 24px 12px;">שווי מצטבר: <span>348 ₪</span></div>
       </div>
 
       <!-- BONUS 3: Shabbat menu -->
@@ -471,9 +473,8 @@
             <h4>🕯️ תפריט שבת שבועי</h4>
             <p>כל יום רביעי — תפריט שבת מוכן: מתכונים, רשימת קניות, לוח זמנים להכנה. 52 שבועות. שולחן שבת שכולם אוכלים ביחד.</p>
           </div>
-          <div class="bonus-value"><div class="amount">499 ₪</div><div class="label">כלול ✓</div></div>
+          <div class="bonus-value"><div class="amount">499 ₪</div><div class="label">כלול ✓</div><div class="running-total">מצטבר: <span>847 ₪</span></div></div>
         </div>
-        <div class="running-total" style="padding: 0 24px 12px;">שווי מצטבר: <span>847 ₪</span></div>
       </div>
 
       <!-- BONUS 4: Holiday kits -->
@@ -484,9 +485,8 @@
             <h4>🍯 ערכות הישרדות לחגים</h4>
             <p>לפני כל חג — תפריט חגיגי לכל המשפחה. מתכונים + הכנה מראש + ״מה להביא כשמגיעים כאורחים.״</p>
           </div>
-          <div class="bonus-value"><div class="amount">249 ₪</div><div class="label">כלול ✓</div></div>
+          <div class="bonus-value"><div class="amount">249 ₪</div><div class="label">כלול ✓</div><div class="running-total">מצטבר: <span>1,096 ₪</span></div></div>
         </div>
-        <div class="running-total" style="padding: 0 24px 12px;">שווי מצטבר: <span>1,096 ₪</span></div>
       </div>
 
       <!-- BONUS 5: Zoom with Adi -->
@@ -497,16 +497,15 @@
             <h4>💬 מפגש קבוצתי חודשי עם עדי בזום</h4>
             <p>30 דקות בחודש. שאלות ותשובות, טיפים, פתרון בעיות. גישה ישירה לעדי. 12 מפגשים בשנה.</p>
           </div>
-          <div class="bonus-value"><div class="amount">499 ₪</div><div class="label">כלול ✓</div></div>
+          <div class="bonus-value"><div class="amount">499 ₪</div><div class="label">כלול ✓</div><div class="running-total">מצטבר: <span>1,595 ₪</span></div></div>
         </div>
-        <div class="running-total" style="padding: 0 24px 12px;">שווי מצטבר: <span>1,595 ₪</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== 6. VALUE REVEAL — no pulse, with payment plan ===== -->
-<section style="background: var(--warm-cream); padding: 24px 24px 64px;">
+<section style="background: var(--warm-cream); padding: 0 24px 44px;">
   <div class="container">
     <div class="value-reveal fade-up">
       <div class="desc">כל זה שווה</div>
@@ -623,9 +622,9 @@
   <div class="container">
     <div class="section-title" style="color: var(--white);">שולחן אחד, ארוחה אחת. אף אחד לא מרגיש שונה.</div>
     <p style="font-size: 16px; opacity: 0.8; margin-bottom: 8px;">מערכת ל-6 שבועות + 5 בונוסים + גישה לכל החיים — 497 ₪ או 3 תשלומים של 166 ₪</p>
+    <p style="font-size: 15px; opacity: 0.85; margin-bottom: 20px; line-height: 1.8;">אפשר להמשיך לבשל שתי ארוחות כל ערב. אפשר להמשיך לאכול לבד, בעמידה, אחרי כולם.<br>או שהערב הזה נגמר — ומחר כבר יש תפריט.</p>
     <p style="font-size: 14px; color: var(--red-accent); font-weight: 700; margin-bottom: 24px;">🍞 סדנת הלחמים — רק למצטרפים עד 16/4</p>
     <a href="#" class="cta-btn" style="font-size: 22px; padding: 20px 56px; align-self: center;">להתחיל עכשיו ←</a>
-    <p class="objection">אפשר להמשיך לבשל שתי ארוחות כל ערב. אפשר להמשיך לאכול לבד, בעמידה, אחרי כולם.<br>או שהערב הזה נגמר — ומחר כבר יש תפריט.</p>
   </div>
 </section>
 
