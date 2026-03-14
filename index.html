@@ -126,6 +126,40 @@
   }
   @media (max-width: 640px) { .testimonial-grid { grid-template-columns: 1fr; } }
 
+  /* ===== ABOUT ADI ===== */
+  .about-adi { background: var(--light-sand); }
+  .about-inner {
+    display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center;
+  }
+  @media (max-width: 640px) {
+    .about-inner { grid-template-columns: 1fr; text-align: center; }
+    .about-photo { margin: 0 auto; }
+  }
+  .about-photo {
+    width: 180px; height: 180px; border-radius: 50%; overflow: hidden;
+    border: 4px solid var(--warm-gold); box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .about-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; }
+  .about-text p + p { margin-top: 10px; }
+  .about-stats {
+    display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap;
+  }
+  @media (max-width: 640px) { .about-stats { justify-content: center; } }
+  .about-stat { text-align: center; }
+  .about-stat .num {
+    font-family: 'Frank Ruhl Libre', serif; font-size: 24px; font-weight: 900;
+    color: var(--deep-brown);
+  }
+  .about-stat .lbl { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+
+  /* ===== PRICE ANCHOR ===== */
+  .price-anchor {
+    margin-top: 24px; margin-bottom: 8px; text-align: center;
+    font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.8;
+  }
+  .price-anchor strong { color: rgba(255,255,255,0.95); font-weight: 600; }
+
   /* ===== WHAT YOU GET ===== */
   .what-you-get { background: var(--white); }
   .core-offer {
@@ -300,7 +334,9 @@
     <div class="section-label">מכירים את זה?</div>
     <div class="section-title">יום שלישי, 18:00. הילדים רעבים. כולם עייפים.</div>
     <div class="section-body">
-      <p>חוזרים מהעבודה, הילדים רעבים — ומתחיל מבצע נפרד: ארוחה להם, ארוחה למי שחייב לאכול אחרת.</p>
+      <p>חוזרים מהעבודה, הילדים צועקים ״רעבים!״ — זורקים להם פסטה או שניצל, ואז מתחילים מבצע נפרד: עוד סיר, עוד צלחת, עוד ארוחה למי שחייב לאכול אחרת.</p>
+      <p>הילד הסוכרתי אוכל ״אוכל מיוחד״ — והאחים שמים לב. בן הזוג עם הצליאק אוכל לבד. ומי שעושה קיטו? אוכלת את השאריות של הילדים. בעמידה. אחרי כולם.</p>
+      <p>כל ערב אותו דבר. שני שולחנות באותו מטבח. מישהו תמיד מרגיש שונה.</p>
     </div>
     <div class="ba-visual fade-up">
       <div class="ba-img-card before">
@@ -358,6 +394,27 @@
   </div>
 </section>
 
+<!-- ===== ABOUT ADI ===== -->
+<section class="about-adi">
+  <div class="container">
+    <div class="section-label">מי מאחורי זה</div>
+    <div class="about-inner fade-up">
+      <div class="about-photo">
+        <img src="images/image-8.jpg" alt="עדי מהתפריט">
+      </div>
+      <div class="about-text">
+        <div class="section-title" style="margin-bottom: 10px;">עדי, התפריט</div>
+        <p>כבר שנים שאני מפתחת מתכונים דלי פחמימה, ללא גלוטן וללא סוכר — כאלה שהמשפחה שלי אוכלת בלי לשים לב שהם ״בריאים.״ אחרי 6 ספרי מתכונים, סדנאות שנמכרו שוב ושוב, וקהילה של עשרות אלפי משפחות — בניתי את המערכת שהלוואי שהיתה לי כשהתחלתי.</p>
+        <div class="about-stats">
+          <div class="about-stat"><div class="num">115K+</div><div class="lbl">עוקבים</div></div>
+          <div class="about-stat"><div class="num">6</div><div class="lbl">ספרי מתכונים</div></div>
+          <div class="about-stat"><div class="num">10K+</div><div class="lbl">משפחות ברשימה</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 4. WHAT YOU GET — cards only, no flat-lay ===== -->
 <section class="what-you-get" id="what-you-get">
   <div class="container">
@@ -409,7 +466,7 @@
             <h4>🛒 הכל מהסופר</h4>
             <p>מדריך מרכיבים, תחליפים ורשימת קניות ראשונה. בלי אייהרב. בלי חיפושים. הכל מהסופר בשכונה.</p>
           </div>
-          <div class="bonus-value"><div class="amount">149 ₪</div><div class="label" style="font-size: 16px;">כלול ✓ ללא עלות</div></div>
+          <div class="bonus-value"><div class="amount">149 ₪</div><div class="label">כלול ✓</div></div>
         </div>
       </div>
 
@@ -424,8 +481,6 @@
           <div class="bonus-value"><div class="amount">199 ₪</div><div class="label">כלול ✓</div></div>
         </div>
       </div>
-
-      <div style="text-align: center; padding: 8px 0; color: var(--text-muted); font-size: 14px; font-weight: 500;">ועוד —</div>
 
       <div class="bonus-card has-image fade-up">
         <div class="bonus-img"><img src="images/image-6.png" alt="שולחן שבת"></div>
@@ -442,7 +497,7 @@
         <div class="bonus-img"><img src="images/image-7.png" alt="קינוחים לחגים"></div>
         <div class="bonus-body">
           <div class="bonus-info">
-            <h4>🎄 ערכות הישרדות לחגים</h4>
+            <h4>🍯 ערכות הישרדות לחגים</h4>
             <p>לפני כל חג — תפריט חגיגי לכל המשפחה. מתכונים + הכנה מראש + ״מה להביא כשמגיעים כאורחים.״ בלי לחץ. בלי ארוחה נפרדת.</p>
           </div>
           <div class="bonus-value"><div class="amount">249 ₪</div><div class="label">כלול ✓</div></div>
@@ -460,12 +515,19 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- VALUE → PRICE REVEAL -->
+<!-- ===== VALUE REVEAL — own section ===== -->
+<section style="background: var(--warm-cream); padding: 24px 24px 64px;">
+  <div class="container">
     <div class="value-reveal fade-up">
       <div class="desc">כל זה שווה</div>
       <div class="struck">2,585 ₪</div>
-      <div class="desc" style="margin-top: 16px;">המחיר שלכם:</div>
+      <div class="price-anchor">
+        <strong>ביקור אחד אצל תזונאית = 400–600 ₪.</strong><br>המערכת הזאת = 6 שבועות שלמות + שבת + חגים + גישה לעדי.
+      </div>
+      <div class="desc">המחיר שלכם:</div>
       <div class="price-reveal">497 ₪ בלבד</div>
       <a href="#final-cta" class="cta-btn" style="margin-top: 20px; font-size: 20px; padding: 18px 48px; align-self: center; display: inline-block;">להתחיל עכשיו ←</a>
     </div>
@@ -532,8 +594,13 @@
 
 <!-- STICKY CTA — appears after scrolling past "what you get" -->
 <div class="sticky-cta" id="sticky-cta">
-  <a href="#final-cta" class="cta-btn">להתחיל עכשיו ←</a>
-  <span class="price">497 ₪</span>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <a href="#final-cta" class="cta-btn">להתחיל עכשיו ←</a>
+      <span class="price">497 ₪</span>
+    </div>
+    <div style="font-size: 11px; color: var(--red-accent); font-weight: 600; opacity: 0.9;">🍞 סדנת הלחמים נעלמת ב-16 באפריל</div>
+  </div>
 </div>
 
 <footer class="footer">
